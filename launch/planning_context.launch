@@ -6,19 +6,19 @@
   <arg name="robot_description" default="robot_description"/>
 
   <!-- Load universal robot description format (URDF) -->
-  <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro joint_limited:=true '$(find ar_arena)/urdf/manipulator_no_gripper_arena_setup.urdf.xacro'"/>
+  <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro joint_limited:=true '$(find robin_arena)/urdf/ur5_magnet_arena_setup.urdf.xacro'"/>
 
   <!-- The semantic description that corresponds to the URDF -->
-  <param name="$(arg robot_description)_semantic" textfile="$(find ar_no_gripper_moveit_config)/config/ar_ur5.srdf" />
+  <param name="$(arg robot_description)_semantic" textfile="$(find robin_ur5_magnet_moveit_config)/config/robin_ur5.srdf" />
 
   <!-- Load updated joint limits (override information from URDF) -->
   <group ns="$(arg robot_description)_planning">
-    <rosparam command="load" file="$(find ar_no_gripper_moveit_config)/config/joint_limits.yaml"/>
+    <rosparam command="load" file="$(find robin_ur5_magnet_moveit_config)/config/joint_limits.yaml"/>
   </group>
 
   <!-- Load default settings for kinematics; these settings are overridden by settings in a node's namespace -->
   <group ns="$(arg robot_description)_kinematics">
-    <rosparam command="load" file="$(find ar_no_gripper_moveit_config)/config/kinematics.yaml"/>
+    <rosparam command="load" file="$(find robin_ur5_magnet_moveit_config)/config/kinematics.yaml"/>
   </group>
 
 </launch>

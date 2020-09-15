@@ -1,9 +1,9 @@
 <package>
 
-  <name>ar_no_gripper_moveit_config</name>
+  <name>robin_ur5_magnet_moveit_config</name>
   <version>0.3.0</version>
   <description>
-     An automatically generated package with all the configuration and launch files for using the ar_ur5 with the MoveIt! Motion Planning Framework
+     An automatically generated package with all the configuration and launch files for using the ur5+magnet with the MoveIt! Motion Planning Framework
   </description>
   <author email="elisa.tosello@unipd.it">Elisa Tosello</author>
   <maintainer email="elisa.tosello@unipd.it">Elisa Tosello</maintainer>
@@ -28,8 +28,8 @@
   <run_depend>xacro</run_depend>
   <!-- This package is referenced in the warehouse launch files, but does not build out of the box at the moment. Commented the dependency until this works. -->
   <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
-  <build_depend>ar_arena</build_depend>
-  <run_depend>ar_arena</run_depend>
+  <build_depend>robin_arena</build_depend>
+  <run_depend>robin_arena</run_depend>
 
 
 </package>
